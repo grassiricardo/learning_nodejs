@@ -1,8 +1,14 @@
+'use strict';
+
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 const router = express.Router();
+
+// Connecta ao banco
+mongoose.connect('mongodb://grassi:123@ds064198.mlab.com:64198/node-store-grassi');
 
 // Carrega as Rotas
 const indexRoute = require('./routes/index-route');
