@@ -12,13 +12,13 @@ const schema = new Schema({
         type: String,
         required: true
     },
-    createData: {
+    createDate: {
         type: Date,
         required: true,
         default: Date.now
     },
     status: {
-        type: Date,
+        type: String,
         required: true,
         enum: ['created', 'done'],
         default: 'created'
@@ -37,7 +37,7 @@ const schema = new Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Product'
         }
-    }]
+    }],
 });
 
 module.exports = mongoose.model('Order', schema);
