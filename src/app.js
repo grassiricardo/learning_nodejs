@@ -13,6 +13,7 @@ mongoose.connect('mongodb://grassi:123@ds064198.mlab.com:64198/node-store-grassi
 // Carrega os Models
 const Product = require('./model/product');
 const Customer = require('./model/customer');
+const Order = require('./model/order');
 
 // Carrega as Rotas
 const indexRoute = require('./routes/index-route');
